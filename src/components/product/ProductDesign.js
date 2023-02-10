@@ -35,11 +35,12 @@ const Wrapper = styled.div`
   margin: 5px;
   position: relative;
   transition: var(--transition-1);
+
   :hover {
     box-shadow: var(--shadow-3);
     p {
-      background-color: var(--primary-1);
-      color: var(--primary-9);
+      background-color: var(--primary-6);
+      color: var(--white);
     }
   }
   .title {
@@ -48,9 +49,8 @@ const Wrapper = styled.div`
     width: 100%;
     position: absolute;
     top: -17px;
-    color: var(--primary-7);
-    background-color: var(--white);
-
+    color: var(--white);
+    background-color: var(--primary-8);
     margin-bottom: 0px;
   }
   .img-container {
