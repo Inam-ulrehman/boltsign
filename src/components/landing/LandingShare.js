@@ -63,9 +63,11 @@ const Wrapper = styled.div`
   h2,
   h3 {
     font-size: 2.5rem;
+    color: var(--grey-8);
   }
   p {
     font-size: 1.2rem;
+    color: var(--grey-5);
   }
 
   .box-mobile {
@@ -81,7 +83,7 @@ const Wrapper = styled.div`
   .box-desktop {
     display: none;
     img {
-      width: 90%;
+      width: 85%;
     }
   }
 
@@ -89,7 +91,7 @@ const Wrapper = styled.div`
     .box {
       min-height: calc(100vh - 3.2rem);
     }
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
     .box-desktop {
       display: grid;
       align-content: end;
@@ -98,8 +100,8 @@ const Wrapper = styled.div`
       padding: 4rem;
       background: linear-gradient(
         90deg,
-        var(--primary-3) 0%,
-        var(--primary-1) 74%,
+        var(--grey-3) 0%,
+        var(--grey-2) 74%,
         var(--grey-05) 100%
       );
       img {
@@ -108,7 +110,6 @@ const Wrapper = styled.div`
     }
   }
   @media (max-width: 992px) {
-    background-color: var(--primary-1);
   }
   @media (max-width: 768px) {
     h1,
