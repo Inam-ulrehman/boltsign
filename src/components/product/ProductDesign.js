@@ -10,9 +10,8 @@ const ProductDesign = ({ item }) => {
     <Wrapper>
       <Link to={item._id}>
         <div>
-          <p className='title'>
-            <strong>{item.title}</strong>
-          </p>
+          <span>{formatPrice(item.amount).slice(2, 17)}</span>
+
           <div className='img-container'>
             <img
               src={image}
@@ -23,8 +22,10 @@ const ProductDesign = ({ item }) => {
               height='100%'
             />
           </div>
-          <span>{formatPrice(item.amount).slice(2, 17)}</span>
         </div>
+        <p className='title'>
+          <strong>{item.title}</strong>
+        </p>
       </Link>
     </Wrapper>
   )
@@ -38,19 +39,16 @@ const Wrapper = styled.div`
 
   :hover {
     box-shadow: var(--shadow-3);
-    p {
-      background-color: var(--primary-6);
-      color: var(--white);
-    }
+    transform: scale(1.03);
   }
   .title {
     transition: var(--transition-1);
     padding: 5px;
-    width: 100%;
-    position: absolute;
-    top: -17px;
-    color: var(--white);
-    background-color: var(--primary-8);
+    max-width: 250px;
+    bottom: 0;
+    background-color: var(--grey-2);
+    color: var(--grey-5);
+
     margin-bottom: 0px;
   }
   .img-container {
@@ -70,6 +68,10 @@ const Wrapper = styled.div`
     .img-container {
       max-width: 180px;
       max-height: 180px;
+    }
+
+    .title {
+      max-width: 180px;
     }
   }
   @media (max-width: 400px) {
