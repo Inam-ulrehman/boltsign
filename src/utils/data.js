@@ -27,8 +27,3 @@ export const dashboardNavLink = [
   { id: 3, title: 'Profile', path: '/dashboard/profile' },
   { id: 4, title: 'Change password', path: '/dashboard/changepassword' },
 ]
-
-// ======== Stripe  ==========
-
-export const StripePaymentStatus =
-  'http://localhost:3000/dashboard/paymentstatus'
