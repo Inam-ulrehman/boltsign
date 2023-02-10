@@ -151,7 +151,7 @@ const Wrapper = styled.div`
     border-radius: var(--radius-1);
     padding: 1rem;
 
-    background-color: var(--primary-1);
+    background-color: var(--grey-4);
     img {
       margin-bottom: -1.5rem;
       margin-left: -1rem;
