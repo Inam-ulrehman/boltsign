@@ -60,6 +60,7 @@ const Wrapper = styled.div`
       margin: 1rem auto;
       padding: 1rem;
       color: var(--grey-5);
+      text-transform: none;
     }
   }
   /* Team Members */
