@@ -34,7 +34,6 @@ const Wrapper = styled.div`
   box-shadow: var(--shadow-1);
   transition: var(--transition);
   margin: 5px;
-  position: relative;
   transition: var(--transition-1);
 
   :hover {
@@ -42,10 +41,11 @@ const Wrapper = styled.div`
     transform: scale(1.03);
   }
   .title {
+    margin-top: -1rem;
     transition: var(--transition-1);
     padding: 5px;
     max-width: 250px;
-    bottom: 0;
+    min-height: 4.2rem;
     background-color: var(--grey-2);
     color: var(--grey-5);
 
