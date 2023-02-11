@@ -12,7 +12,10 @@ export const GoogleMaps = () => {
 }
 
 function Map() {
-  const { contentContacts } = useSelector((state) => state.websiteContent)
+  const {
+    contentContacts,
+    GoogleOpeningHours: { open_now, weekday_text },
+  } = useSelector((state) => state.websiteContent)
 
   const lat = Number(
     contentContacts.googleLocation?.split('@')[1].split(',')[0]
@@ -21,10 +24,22 @@ function Map() {
     contentContacts.googleLocation?.split('@')[1].split(',')[1]
   )
   const center = { lat, lng }
-  console.log(typeof Number(lng))
+
   return (
     <Wrapper>
-      <div className='google-time'>google time</div>
+      <div className='google-time'>
+        <div className='title'>
+          We are currently <strong>{open_now ? 'Open' : 'Closed'}.</strong>
+        </div>
+        <div className='body '>
+          <span>Operational hours </span>
+          <ul>
+            {weekday_text?.map((item) => {
+              return <li>{item}</li>
+            })}
+          </ul>
+        </div>
+      </div>
 
       <GoogleMap
         zoom={16}
@@ -43,7 +58,19 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 1rem;
+  background-color: var(--grey-2);
+  .body {
+    display: grid;
+    justify-content: center;
 
+    span {
+      margin: 0 auto;
+    }
+    ul {
+      padding: 1rem;
+      color: var(--grey-5);
+    }
+  }
   .map-container {
     width: 100%;
     height: 60vh;

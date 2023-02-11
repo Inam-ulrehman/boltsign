@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import { customFetch } from '../../utils/axios'
 import { GrNext, GrPrevious } from 'react-icons/gr'
 import Stars from '../singleComponents/Stars'
+import { useDispatch } from 'react-redux'
+import { getStateValues } from '../../features/websiteContent/websiteContentSlice'
 
 const initialState = {
   name: '',
@@ -17,6 +19,7 @@ const initialState = {
 }
 
 const GoogleReviews = () => {
+  const dispatch = useDispatch()
   const [state, setState] = useState(initialState)
 
   const handleNext = () => {
@@ -35,7 +38,19 @@ const GoogleReviews = () => {
   const fetchData = async () => {
     try {
       const result = await customFetch('/googleReviews')
-      const { name, rating, reviews, formatted_address } = result.data.result
+      const {
+        current_opening_hours,
+        name,
+        rating,
+        reviews,
+        formatted_address,
+      } = result.data.result
+      dispatch(
+        getStateValues({
+          name: 'GoogleOpeningHours',
+          value: current_opening_hours,
+        })
+      )
 
       setState({
         ...state,

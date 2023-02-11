@@ -10,6 +10,7 @@ const initialState = {
   contentSocialLinks: '',
   aboutUsTitle: '',
   aboutUs: [],
+  GoogleOpeningHours: {},
   isLoading: false,
 }
 
@@ -60,6 +61,10 @@ const websiteContentSlice = createSlice({
     createFunction: (state, { payload }) => {
       console.log('function call')
     },
+    getStateValues: (state, { payload }) => {
+      const { name, value } = payload
+      state[name] = value
+    },
   },
   extraReducers: {
     [websiteContentThunk.pending]: (state, { payload }) => {
@@ -81,5 +86,5 @@ const websiteContentSlice = createSlice({
     },
   },
 })
-export const { createFunction } = websiteContentSlice.actions
+export const { createFunction, getStateValues } = websiteContentSlice.actions
 export default websiteContentSlice.reducer
