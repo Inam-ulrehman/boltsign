@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
-import { getStateValues } from '../../features/product/productSlice'
+import { getStateValues, clearState } from '../../features/product/productSlice'
 import ScrollHook from '../../hooks/ScrollHook'
 
 const ProductCategory = () => {
@@ -9,6 +9,7 @@ const ProductCategory = () => {
   const { category, searchCategory } = useSelector((state) => state.product)
 
   const handleCategory = (e) => {
+    dispatch(clearState())
     ScrollHook()
     const value = e.target.value
     if (value === 'all') {
