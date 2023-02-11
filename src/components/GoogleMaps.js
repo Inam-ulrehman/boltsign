@@ -48,4 +48,7 @@ const Wrapper = styled.div`
     width: 100%;
     height: 60vh;
   }
+  @media (max-width: 680px) {
+    grid-template-columns: 1fr;
+  }
 `
