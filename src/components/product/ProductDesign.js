@@ -41,7 +41,7 @@ const Wrapper = styled.div`
     transform: scale(1.03);
   }
   .title {
-    margin-top: -1rem;
+    margin-top: 0;
     transition: var(--transition-1);
     padding: 5px;
     max-width: 250px;
