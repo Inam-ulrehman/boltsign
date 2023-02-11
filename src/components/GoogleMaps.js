@@ -56,7 +56,8 @@ function Map() {
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
   padding: 1rem;
   background-color: var(--grey-2);
   .body {
@@ -74,6 +75,13 @@ const Wrapper = styled.div`
   .map-container {
     width: 100%;
     height: 60vh;
+  }
+  @media (min-width: 820px) {
+    min-height: calc(100vh - 53px);
+    .map-container {
+      width: 100%;
+      height: 80vh;
+    }
   }
   @media (max-width: 680px) {
     grid-template-columns: 1fr;
