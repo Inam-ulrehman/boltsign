@@ -113,45 +113,34 @@ const Wrapper = styled.div`
 
   @media (max-width: 1024px) {
     .container-holder {
-      max-width: 210px;
+      margin-top: 1rem;
+      max-width: 380px;
     }
     .container-image {
-      width: 210px;
-      height: 210px;
+      width: 380px;
+      height: 380px;
     }
   }
-  @media (max-width: 992px) {
-  }
-  @media (max-width: 768px) {
+  @media (max-width: 820px) {
     .container-holder {
-      max-width: 190px;
+      margin-top: 1rem;
+      max-width: 280px;
     }
     .container-image {
-      width: 190px;
-      height: 190px;
+      width: 280px;
+      height: 280px;
     }
   }
+
   @media (max-width: 620px) {
     min-height: auto;
     .container-holder {
       margin-top: 1rem;
-      max-width: 180px;
+      max-width: 80vw;
     }
     .container-image {
-      width: 180px;
-      height: 180px;
-    }
-  }
-  @media (max-width: 480px) {
-  }
-  @media (max-width: 400px) {
-    .container-holder {
-      margin-top: 1rem;
-      max-width: 160px;
-    }
-    .container-image {
-      width: 160px;
-      height: 160px;
+      width: 80vw;
+      height: auto;
     }
   }
 `
