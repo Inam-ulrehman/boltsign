@@ -68,6 +68,12 @@ const Wrapper = styled.div`
   .box-2 {
     display: flex;
     flex-wrap: wrap;
+    p {
+      margin: 1rem auto;
+      padding: 1rem;
+      color: var(--grey-5);
+      text-transform: none;
+    }
   }
 `
 export default AboutUs

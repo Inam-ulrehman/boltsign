@@ -81,6 +81,12 @@ const Wrapper = styled.div`
     .paragraph {
       padding: 1rem;
       color: var(--grey-5);
+      p {
+        margin: 1rem auto;
+        padding: 1rem;
+        color: var(--grey-5);
+        text-transform: none;
+      }
     }
   }
   @media (min-width: 600px) {
