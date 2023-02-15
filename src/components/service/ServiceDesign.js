@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { formatPrice } from '../../utils/helper'
+// import { formatPrice } from '../../utils/helper'
 
 const ServiceDesign = ({ item }) => {
   const image = item.uploadImage[0].secure_url

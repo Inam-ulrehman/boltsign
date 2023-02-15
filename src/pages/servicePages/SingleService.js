@@ -11,9 +11,8 @@ import {
   getCart,
   getSingleServiceThunk,
 } from '../../features/service/serviceSlice'
-import { formatPrice } from '../../utils/helper'
-
 // import { formatPrice } from '../../utils/helper'
+
 const initialState = {
   index: 0,
 }

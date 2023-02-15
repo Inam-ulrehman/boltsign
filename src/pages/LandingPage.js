@@ -11,13 +11,9 @@ import {
 } from '../components/landing'
 
 const LandingPage = () => {
-  const {
-    mobileNumber,
-    contentContacts,
-    sectionOne,
-    sectionTwo,
-    sectionThree,
-  } = useSelector((state) => state.websiteContent)
+  const { contentContacts, sectionOne, sectionTwo, sectionThree } = useSelector(
+    (state) => state.websiteContent
+  )
 
   const mobileLink = `tel:${contentContacts.mobileNumber}`
   return (
