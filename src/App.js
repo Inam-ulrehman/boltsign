@@ -14,6 +14,7 @@ import {
   Prices,
 } from './pages'
 import { Products, SingleProduct } from './pages/productPages'
+import { Services, SingleService } from './pages/servicePages'
 import { CheckOut, PaymentStatus } from './pages/stripePages'
 import {
   Dashboard,
@@ -28,6 +29,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { websiteContentThunk } from './features/websiteContent/websiteContentSlice'
 import { getProductThunk } from './features/product/productSlice'
 import { AboutUs, SingleAboutUs } from './pages/aboutUsPages'
+import { getServiceThunk } from './features/service/serviceSlice'
 
 const App = () => {
   const dispatch = useDispatch()
@@ -36,6 +38,7 @@ const App = () => {
   useEffect(() => {
     dispatch(websiteContentThunk())
     dispatch(getProductThunk())
+    dispatch(getServiceThunk())
     // eslint-disable-next-line
   }, [])
   if (isLoading) {
@@ -83,6 +86,8 @@ const App = () => {
           <Route path='about/:_id' element={<SingleAboutUs />} />
           <Route path='products' element={<Products />} />
           <Route path='products/:_id' element={<SingleProduct />} />
+          <Route path='services' element={<Services />} />
+          <Route path='services/:_id' element={<SingleService />} />
           <Route path='prices' element={<Prices />} />
           <Route path='contact' element={<Contact />} />
           <Route path='register' element={<Register />} />

@@ -34,8 +34,8 @@ function Map() {
         <div className='body '>
           <span>Operational hours </span>
           <ul>
-            {weekday_text?.map((item) => {
-              return <li>{item}</li>
+            {weekday_text?.map((item, index) => {
+              return <li key={index}>{item}</li>
             })}
           </ul>
         </div>
