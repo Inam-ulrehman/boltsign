@@ -119,11 +119,14 @@ const SingleService = () => {
           </div>
           <div className='description-heading'>
             <span>
-              <strong>{formatPrice(singleService.amount)}</strong>
+              {/* <strong>{formatPrice(singleService.amount)}</strong> */}
             </span>
+            <Link className='btn' to={'/contact'}>
+              Contact Us For More Details
+            </Link>
 
             {/* ========== CART======START*/}
-            {singleService.inStock && singleService?.totalStock > 0 && (
+            {/* {singleService.inStock && singleService?.totalStock > 0 && (
               <div className='cart'>
                 <form onSubmit={handleSubmit}>
                   <label>
@@ -141,7 +144,7 @@ const SingleService = () => {
                   </button>
                 </form>
               </div>
-            )}
+            )} */}
 
             {/* ========== CART======END*/}
           </div>
