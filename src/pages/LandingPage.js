@@ -4,10 +4,10 @@ import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 import { GoogleMaps } from '../components/GoogleMaps'
 import {
-  LandingNewProducts,
   LandingFeatureProduct,
   LandingShare,
   GoogleReviews,
+  LandingFeatureServices,
 } from '../components/landing'
 
 const LandingPage = () => {
@@ -34,7 +34,7 @@ const LandingPage = () => {
       <LandingShare landingPage={sectionOne} heading={1} />
       <LandingFeatureProduct />
       <LandingShare landingPage={sectionTwo} heading={2} />
-      <LandingNewProducts />
+      <LandingFeatureServices />
       <LandingShare landingPage={sectionThree} heading={3} />
       <GoogleReviews />
       <GoogleMaps />

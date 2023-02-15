@@ -17,7 +17,7 @@ const LandingFeatureProduct = () => {
     <Wrapper>
       <div className='container-header'>
         <div className='title'>
-          Feature <span>Services</span>
+          Feature <span>Products</span>
         </div>
         <div className='title-underline'></div>
       </div>

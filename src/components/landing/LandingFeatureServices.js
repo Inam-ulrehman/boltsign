@@ -4,25 +4,25 @@ import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { getStateValues } from '../../features/product/productSlice'
 
-const LandingNewProducts = () => {
+const LandingFeatureServices = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const { newProducts } = useSelector((state) => state.product)
+  const { newServices } = useSelector((state) => state.service)
 
   const handleClick = (category) => {
-    navigate(`/products`)
+    navigate(`/services`)
     dispatch(getStateValues({ name: 'searchCategory', value: category }))
   }
   return (
     <Wrapper>
       <div className='container-header'>
         <div className='title'>
-          New <span>Services</span>
+          Feature <span>Services</span>
         </div>
         <div className='title-underline'></div>
       </div>
       <div className='container'>
-        {newProducts
+        {newServices
           .map((item, index) => {
             return (
               <div
@@ -144,4 +144,4 @@ const Wrapper = styled.div`
     }
   }
 `
-export default LandingNewProducts
+export default LandingFeatureServices

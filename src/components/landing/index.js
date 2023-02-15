@@ -1,11 +1,11 @@
-import LandingNewProducts from './LandingNewProducts'
 import LandingFeatureProduct from './LandingFeatureProducts'
 import LandingShare from './LandingShare'
-
 import GoogleReviews from './GoogleReviews'
+import LandingFeatureServices from './LandingFeatureServices'
+
 export {
   GoogleReviews,
-  LandingNewProducts,
+  LandingFeatureServices,
   LandingShare,
   LandingFeatureProduct,
 }
