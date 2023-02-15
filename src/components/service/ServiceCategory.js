@@ -48,7 +48,6 @@ const Wrapper = styled.div`
   top: 3.2rem;
   z-index: 1;
   .category-holder {
-    padding-right: 15rem;
     background: var(--primary-8);
     display: flex;
     justify-content: center;
