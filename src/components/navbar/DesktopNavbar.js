@@ -8,9 +8,7 @@ import { navbar } from '../../utils/data'
 import Logo from '../Logo'
 
 const DesktopNavbar = () => {
-  const { user, product, websiteContent } = useSelector((state) => state)
-  const { mobileNumber } = websiteContent.contentContacts
-  const mobileLink = `tel:${mobileNumber}`
+  const { user, product } = useSelector((state) => state)
 
   const dispatch = useDispatch()
   return (
@@ -52,14 +50,6 @@ const DesktopNavbar = () => {
           </li>
         )}
       </ul>
-      <div className='number'>
-        <a href={mobileLink}>
-          <span>
-            <strong>Call Us @</strong>
-          </span>
-          {mobileNumber}
-        </a>
-      </div>
     </Wrapper>
   )
 }
@@ -78,33 +68,7 @@ const Wrapper = styled.nav`
   .logo-holder {
     overflow: hidden;
   }
-  .number {
-    position: absolute;
-    right: 0%;
-    top: 120%;
-    /* border: 2px solid black; */
-    background: var(--grey-2);
-    box-shadow: var(--shadow-2);
-    padding-right: 2rem;
-    font-size: 1.5rem;
-    padding-left: 5px;
-    transition: var(--transition);
-    border-top-left-radius: var(--radius-1);
-    border-bottom-left-radius: var(--radius-1);
-    :hover {
-      cursor: pointer;
-      box-shadow: var(--shadow-3);
-    }
-    a {
-      color: black;
-    }
-    strong {
-      color: var(--primary-5);
-    }
-    span {
-      margin-right: 0.5rem;
-    }
-  }
+
   ul {
     display: flex;
     margin-right: 1rem;
