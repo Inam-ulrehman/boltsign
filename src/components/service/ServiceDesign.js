@@ -10,7 +10,7 @@ const ServiceDesign = ({ item }) => {
     <Wrapper>
       <Link to={item._id}>
         <div>
-          <span>{formatPrice(item.amount).slice(2, 17)}</span>
+          {/* <span>{formatPrice(item.amount).slice(2, 17)}</span> */}
 
           <div className='img-container'>
             <img
