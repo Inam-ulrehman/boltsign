@@ -18,7 +18,13 @@ const LandingShare = ({ landingPage, heading }) => {
           </Link>
         </div>
         <div className='box box-desktop'>
-          <img src={url} alt='computerPicture' />
+          <img
+            src={url}
+            alt='computerPicture'
+            loading='eager'
+            width='100%'
+            height='100%'
+          />
         </div>
       </Wrapper>
     )
