@@ -14,7 +14,7 @@ export const userThunk = createAsyncThunk(
   async (_, thunkAPI) => {
     const user = getUserFromLocalStorage()
     try {
-      const response = await customFetch.get()
+      const response = await customFetch.get('/products/static')
       console.log('hello Thunk')
       return response.data
     } catch (error) {
