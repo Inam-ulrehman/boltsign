@@ -31,6 +31,7 @@ const LandingPage = () => {
           {contentContacts.mobileNumber}
         </a>
       </div>
+
       <LandingShare landingPage={sectionOne} heading={1} />
       <LandingFeatureProduct />
       <LandingShare landingPage={sectionTwo} heading={2} />

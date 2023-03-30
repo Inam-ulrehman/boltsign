@@ -13,13 +13,7 @@ import ForgetPassword from '../../components/user/ForgetPassword'
 import { Helmet } from 'react-helmet-async'
 import FormInput from '../../components/FormInput'
 import Logo from '../../components/Logo'
-const genderValue = [
-  'male',
-  'female',
-  'transgender',
-  'non-binary/non-conforming',
-  'prefer not to respond',
-]
+const genderValue = ['male', 'female', 'other']
 
 const Register = () => {
   const dispatch = useDispatch()

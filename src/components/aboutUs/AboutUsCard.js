@@ -2,24 +2,18 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { paragraphLimit } from '../../utils/helper'
+import ImageCloudFixSize from '../ImageCloudFixSize'
 
 const AboutUsCard = ({ image, name, profession, paragraph, _id }) => {
   const navigate = useNavigate()
-
+  console.log(image)
   const handleClick = () => {
     navigate(`/about/${_id}`)
   }
   return (
     <Wrapper onClick={handleClick}>
       <div className='image'>
-        <img
-          src={image}
-          alt={name}
-          title={name}
-          loading='lazy'
-          width='100%'
-          height='100%'
-        />
+        <ImageCloudFixSize src={image} width={720} height={720} />
       </div>
       <div className='body'>
         <div className='spanHolder'>

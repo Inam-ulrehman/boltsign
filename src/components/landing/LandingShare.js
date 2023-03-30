@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import ImageCloudFixSize from '../ImageCloudFixSize'
 // import { landingPage } from '../../utils/data'
 const url =
   'https://res.cloudinary.com/inam6530/image/upload/v1667055870/inamwebsolutions/Untitled_design_qebmwe.svg'
@@ -36,13 +37,10 @@ const LandingShare = ({ landingPage, heading }) => {
         {heading === 1 && <h1>{landingPage?.heading}</h1>}
         {heading === 2 && <h2>{landingPage?.heading}</h2>}
         {heading === 3 && <h3>{landingPage?.heading}</h3>}
-        <img
-          src={landingPage?.uploadImage[0]?.secure_url}
-          alt={landingPage?.heading}
-          title={landingPage?.heading}
-          loading='lazy'
-          width='300px'
-          height='300px'
+        <ImageCloudFixSize
+          src={landingPage?.uploadImage[0]?.public_id}
+          width={720}
+          height={720}
         />
         <p>{landingPage?.paragraph}</p>
         <Link to={'/products'} className='btn'>
@@ -50,14 +48,13 @@ const LandingShare = ({ landingPage, heading }) => {
         </Link>
       </div>
       <div className='box box-desktop'>
-        <img
-          src={landingPage?.uploadImage[0]?.secure_url}
-          alt={landingPage?.heading}
-          title={landingPage?.heading}
-          loading='lazy'
-          width='100%'
-          height='100%'
-        />
+        <div className='image-box'>
+          <ImageCloudFixSize
+            src={landingPage?.uploadImage[0]?.public_id}
+            width={720}
+            height={720}
+          />
+        </div>
       </div>
     </Wrapper>
   )
@@ -77,13 +74,17 @@ const Wrapper = styled.div`
   }
 
   .box-mobile {
+    overflow: hidden;
     display: grid;
     padding: 2rem;
     align-content: center;
     justify-items: center;
 
+    .image-box {
+      max-width: 95vw;
+    }
     img {
-      width: 300px !important;
+      width: 100%;
     }
   }
   .box-desktop {

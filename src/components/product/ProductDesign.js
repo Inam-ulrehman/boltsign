@@ -2,10 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { formatPrice } from '../../utils/helper'
+import ImageCloudFixSize from '../ImageCloudFixSize'
 
 const ProductDesign = ({ item }) => {
-  const image = item.uploadImage[0].secure_url
-
   return (
     <Wrapper>
       <Link to={item._id}>
@@ -13,13 +12,12 @@ const ProductDesign = ({ item }) => {
           <span>{formatPrice(item.amount).slice(2, 17)}</span>
 
           <div className='img-container'>
-            <img
-              src={image}
-              alt={item.title}
-              title={item.title}
-              loading='eager'
-              width='100%'
-              height='100%'
+            <ImageCloudFixSize
+              src={item?.uploadImage[0]?.public_id}
+              alt={item?.title}
+              title={item?.title}
+              width={420}
+              height={420}
             />
           </div>
         </div>

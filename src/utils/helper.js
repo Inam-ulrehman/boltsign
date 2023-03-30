@@ -68,3 +68,10 @@ export const addObjectInState = (payload, state) => {
     state[key] = value
   })
 }
+
+export const cloudinarySrc = (image) => {
+  const first = image.split('/')[7]
+  const second = image.split('/')[8].split('.')[0]
+  const src = `${first}/${second}`
+  return src
+}

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
+import ImageCloudFixSize from '../../components/ImageCloudFixSize'
 
 const SingleAboutUs = () => {
   const { _id } = useParams()
@@ -18,13 +19,12 @@ const SingleAboutUs = () => {
         <link rel='canonical' href='/contact' />
       </Helmet>
       <div className='box-1'>
-        <img
-          src={person?.uploadImage[0]?.secure_url}
+        <ImageCloudFixSize
+          src={person?.uploadImage[0]?.public_id}
           alt={person?.name}
           title={person?.name}
-          loading={'eager'}
-          width='100%'
-          height='100%'
+          width={720}
+          height={720}
         />
       </div>
       <div className='box-2'>

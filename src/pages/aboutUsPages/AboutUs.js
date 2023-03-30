@@ -29,11 +29,12 @@ const AboutUs = () => {
         <div className='box-2'>
           {aboutUs.map((item, index) => {
             const { uploadImage, name, profession, paragraph, _id } = item
+
             return (
               <AboutUsCard
                 key={index}
                 _id={_id}
-                image={uploadImage[0]?.secure_url}
+                image={uploadImage[0]?.public_id}
                 name={name}
                 profession={profession}
                 paragraph={paragraph}

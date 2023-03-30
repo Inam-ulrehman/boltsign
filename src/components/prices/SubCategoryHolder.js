@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { formatPrice } from '../../utils/helper'
+import ImageCloudFixSize from '../ImageCloudFixSize'
 
 const SubCategoryHolder = ({ subCategoryProducts }) => {
   const navigate = useNavigate()
@@ -19,13 +20,12 @@ const SubCategoryHolder = ({ subCategoryProducts }) => {
             onClick={() => handleClick(item._id)}
           >
             <div className='image-holder'>
-              <img
-                src={item.uploadImage[0].secure_url}
-                alt={item.title}
-                title={item.title}
-                loading='eager'
-                width='100%'
-                height='100%'
+              <ImageCloudFixSize
+                src={item?.uploadImage[0]?.public_id}
+                alt={item?.name}
+                title={item?.name}
+                width={70}
+                height={70}
               />
             </div>
             <span>{item.title}</span>
